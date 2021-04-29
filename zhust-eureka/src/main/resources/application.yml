@@ -1,0 +1,38 @@
+#eureka.server.enable-self-preservation: false
+#eureka:
+#  server:
+#    eviction-interval-timer-in-ms: 3000
+#  instance:
+#    ip-address: 192.168.10.134
+#    prefer-ip-address: true
+---
+spring:
+  config:
+    activate:
+      on-profile: ek1
+server.port: 7900
+eureka.client.register-with-eureka: true
+eureka.client.fetch-registry: true
+eureka.client.serviceUrl.defaultZone: http://ek2.com:7901/eureka/
+eureka.instance.hostname: ek1.com
+management.endpoint.shutdown.enabled: true
+eureka.instance.appname: eurekaServer
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+---
+spring:
+  config:
+    activate:
+      on-profile: ek2
+server.port: 7901
+eureka.client.register-with-eureka: true
+eureka.client.fetch-registry: true
+eureka.client.serviceUrl.defaultZone: http://ek1.com:7900/eureka/
+eureka.instance.hostname: ek2.com
+management.endpoint.shutdown.enabled: true
+eureka.instance.appname: eurekaServer
+management.endpoints.web.exposure.include: '*'
