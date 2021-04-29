@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  * 再次测试推送
  * 测试从远程端合并到本地
  * 再次测试
- * ffffff
+ * ggggg
  */
 @SpringBootApplication
 @EnableEurekaServer
