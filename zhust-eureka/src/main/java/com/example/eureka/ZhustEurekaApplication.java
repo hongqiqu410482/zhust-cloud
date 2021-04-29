@@ -1,5 +1,6 @@
 package com.example.eureka;
 
+import com.example.eureka.conf.EnableTest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
@@ -14,6 +15,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
  */
 @SpringBootApplication
 @EnableEurekaServer
+@EnableTest
 public class ZhustEurekaApplication {
 
 	public static void main(String[] args) {
