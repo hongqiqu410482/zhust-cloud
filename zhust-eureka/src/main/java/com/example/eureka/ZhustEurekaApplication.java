@@ -1,6 +1,9 @@
 package com.example.eureka;
 
 import com.example.eureka.conf.EnableTest;
+import com.example.eureka.controller.TestController;
+import org.aspectj.weaver.Advice;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
@@ -18,8 +21,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 @EnableTest
 public class ZhustEurekaApplication {
 
+
 	public static void main(String[] args) {
 		SpringApplication.run(ZhustEurekaApplication.class, args);
+
 	}
 
 }

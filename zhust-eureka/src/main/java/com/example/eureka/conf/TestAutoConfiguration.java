@@ -17,11 +17,8 @@
 package com.example.eureka.conf;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
-import org.springframework.context.annotation.Lazy;
 
 
 @Configuration(proxyBeanMethods = false)

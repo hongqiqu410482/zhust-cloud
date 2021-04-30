@@ -8,10 +8,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration(proxyBeanMethods = false)
 public class TestConfiguration {
     Logger logger = LoggerFactory.getLogger(TestConfiguration.class);
-//    @Bean
-//    public Test test() {
-//        return new Test();
-//    }
+    @Bean
+    public Test test() {
+        return new Test();
+    }
 
     class Test{
         public Test() {
